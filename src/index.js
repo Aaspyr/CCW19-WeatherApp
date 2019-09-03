@@ -9,6 +9,8 @@ import getMeteoData from "./js/meteoData"
 //funckcja odpowiedzialna za wyświetlanie danych pogodowych
 const showMeteoData = async () => {
     const meteo = await getMeteoData("Warszawa");
+    const days = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
+    const month = ["Stycznia", "Lutego", "Marca", "Kwietnia", "Maja", "Czerwca", "Lipca", "Sierpnia", "Września", "Października", "Listopada", "Grudnia"];
     console.log(meteo)
     // stan na obecny dzień
     document.getElementsByClassName("main__box2--temp header")[0].innerHTML = `${meteo[0].temp}&deg;C`;
@@ -39,11 +41,16 @@ const showMeteoData = async () => {
     }
 
     //stan na następne 5 dni
+    const nextDays = document.querySelectorAll(".rightAside__forcast--date");
+    console.log(nextDays);
     const nextDaysTempMin = document.querySelectorAll(".rightAside__forcast--minMax > p:first-child");
     const nextDaysTempMax = document.querySelectorAll(".rightAside__forcast--minMax > p:last-child");
+    nextDays.forEach((element, i)=>{
+        let dateElement = new Date(meteo[i+1].date);
+        element.innerHTML = `${days[dateElement.getDay()]} ${dateElement.getDate()} ${month[dateElement.getMonth()]}`;
+    });
     nextDaysTempMin.forEach((element, i) => {element.innerHTML = `temp. min: ${meteo[i+1].temp_min}&deg;C`;});
     nextDaysTempMax.forEach((element, i) => {element.innerHTML = `temp. max: ${meteo[i+1].temp_max}&deg;C`;});
-
 }
 
 showMeteoData();
