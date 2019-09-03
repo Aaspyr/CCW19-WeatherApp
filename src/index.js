@@ -2,7 +2,7 @@ import "./scss/main.scss";
 
 import "./js/townSearcher"
 import "./js/loadingScreen"
-import "./js/geolocation";
+// import "./js/geolocation";
 
 import getMeteoData from "./js/meteoData"
 
