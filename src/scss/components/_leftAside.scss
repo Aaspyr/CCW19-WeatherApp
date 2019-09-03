@@ -1,5 +1,60 @@
-.leftAside {
+.leftAsideBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 323px;
     height: 900px;
     background-color: $color-transparent-leftAside;
+
+    &__image {
+        position: absolute;
+        width: 323px;
+        height: 323px;
+        left: 0px;
+        top: 170px;
+
+        img {
+
+            position: absolute;
+            width: 192.96px;
+            height: 213.28px;
+            left: 65px;
+            top: 79px;
+        }
+
+
+    }
+
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 224px;
+        height: 108px;
+        left: 50px;
+        top: 479px;
+
+
+    }
+
+    &__chooseCity {
+        position: relative;
+        top: 0;
+        left: 0;
+
+        &--input {
+            width: 100%;
+        }
+
+        // &--button {
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+
+
+        // }
+    }
+
 }
