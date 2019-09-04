@@ -1,5 +1,3 @@
-const dateInApp = document.getElementsByClassName('showDate');
-
 function showDate() {
     let currentDate = new Date();
     let numberDay = currentDate.getDate();
@@ -12,6 +10,8 @@ function showDate() {
     if (minutes < 10) {
         minutes = "0" + minutes;
     }
+    let month;
+    let day;
 
     switch (currentDate.getMonth()) {
 
@@ -96,7 +96,6 @@ function showDate() {
 
     }
 
-    const showInApp = dateInApp.innerHTML = day + ", " + numberDay + " " + month + " " + year + " " + hours + ":" + minutes;
-    return showInApp
+    document.getElementsByClassName('showDate')[0].innerHTML = day + ", " + numberDay + " " + month + " " + year + " " + hours + ":" + minutes;
 }
 showDate()
