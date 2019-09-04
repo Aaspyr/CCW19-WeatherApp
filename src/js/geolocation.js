@@ -2,10 +2,10 @@ const btnPos = document
     .querySelector(".leftAsideBox__findCity--button")
     .addEventListener('click', getLocation);
 const btnWeather = document
-    .querySelector(".leftAsideBox__ChooseCity--button")
+    .querySelector(".leftAsideBox__chooseCity--button")
     .addEventListener('click', getWeather);
 // Prevent form submit
-document.querySelector(".leftAsideBox__ChooseCity--button").addEventListener('click',(event)=>event.preventDefault());
+document.querySelector(".leftAsideBox__chooseCity--button").addEventListener('click',(event)=>event.preventDefault());
 const divPos = document.querySelector(".main__box1--header");
 const divWeather = document.querySelector(".main__box1--paragraph");
 
@@ -43,7 +43,7 @@ function error(err) {
 
 // Get city from input
 async function getCity(){
-  const inputCity = document.querySelector('.leftAsideBox__ChooseCity--input').value;
+  const inputCity = document.querySelector('.leftAsideBox__chooseCity--input').value;
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${inputCity}&APPID=307b855de38a960270e1caa9d305240a`;
   const response = await fetch(url);
   const result = await response.json();
