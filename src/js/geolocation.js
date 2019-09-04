@@ -28,11 +28,14 @@ function showPosition(position) {
     .then(response => response.json())
     .then(data => {
       myRes=data;
-      divPos.innerHTML =`Twoje miasto: ${myRes.name}<br>
-      Szerokość geograficzna (Latitude): ${lat}<br>
-      Długość geograficzna (Longitude): ${lon}`;
-      divWeather.innerHTML = `
-      The weather in ${myRes.name} is: ${myRes.weather[0].main}`
+      divPos.innerHTML = myRes.name;
+      //TODO - poprawić kod żeby wyświetlał dane tam gdzie powinien ;) 
+      
+      // `Twoje miasto: ${myRes.name}<br>
+      // Szerokość geograficzna (Latitude): ${lat}<br>
+      // Długość geograficzna (Longitude): ${lon}`;
+      // divWeather.innerHTML = `
+      // The weather in ${myRes.name} is: ${myRes.weather[0].main}`
     })
 };
 
