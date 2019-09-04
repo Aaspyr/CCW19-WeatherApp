@@ -1,11 +1,13 @@
-import "./scss/main.scss";
-
+import "./scss/main.scss"
 import "./js/townSearcher"
 import "./js/loadingScreen"
 // import "./js/currentDate"
 import "./js/geolocation";
 import "./js/readingInput"
+import "./js/errorHandling"
+import {checkStatus} from "./js/errorHandling"
 
+checkStatus();
 import getMeteoData from "./js/meteoData"
 
 //funckcja odpowiedzialna za wyświetlanie danych pogodowych
