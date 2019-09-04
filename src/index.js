@@ -2,7 +2,7 @@ import "./scss/main.scss";
 
 import "./js/townSearcher"
 import "./js/loadingScreen"
-import "./js/currentDate"
+// import "./js/currentDate"
 import "./js/geolocation";
 import "./js/readingInput"
 

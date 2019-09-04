@@ -15,8 +15,8 @@
 
 <body>
   <!-- Loading Scr-->
-  <div class="loadingScreen">
-    <img class="loadingScreen__image" src="./icons/logo.svg" alt="logo">
+  <div class="loading">
+    <img class="loading__image" src="./icons/logo.svg" alt="logo">
     <div class="loading__bar">
       <div class="loading__bar--status"></div>
     </div>
@@ -26,17 +26,17 @@
     <section class="leftAside">
       <div class="leftAsideBox">
         <div class="leftAsideBox__image">
-          <img scr="#" />
+          <img src="icons/logo.svg" alt="">
         </div>
         <div class="leftAsideBox__form">
-          <form method="post" enctype="text/plain" class="leftAsideBox__ChooseCity">
-            <input type="text" class="leftAsideBox__ChooseCity--input" id="autocomplete" placeholder="wybierz miasto" />
-            <button class="leftAsideBox__ChooseCity--button">go</button>
-          </form>
+          <div class="leftAsideBox__chooseCity">
+            <input class="leftAsideBox__chooseCity--input" id="autocomplete" placeholder="wybierz miasto" />
+            <button class="leftAsideBox__chooseCity--button"><img src="icons/go.svg" alt=""></button>
+          </div>
           <div class="leftAsideBox__findCity">
             <label class="leftAsideBox__findCity--label">albo</label>
-            <button class="leftAsideBox__findCity--button">
-              Znajdź mnie!
+            <button class="leftAsideBox__findCity--button">Znajdź mnie!<img src="icons/baseline-pin_drop-24px.svg"
+                alt="">
             </button>
           </div>
         </div>
@@ -49,6 +49,7 @@
         <header class="main__box1--header header">Wrocław</header>
         <p class="main__box1--paragraph">nie pada!</p>
       </div>
+      <script async src="js/geolocation.js"></script>
       <div class="main__box2">
         <div class="main__box2--temp header">45&deg;C</div>
         <div class="main__box2--minMax">
@@ -57,57 +58,66 @@
         </div>
       </div>
       <div class="main__box3">
-        <div class="main__box3--pressure">Ciśnienie</div>
-        <div class="main__box3--humidity">Wilgotność</div>
-        <div class="main__box3--wind">Wiatr</div>
+        <div class="main__box3--pressure weather-info">
+          <p>Ciśnienie: </p>
+          <p class="pressure weather-info--bold"></p>
+        </div>
+        <div class="main__box3--humidity weather-info">
+          <p>Wilgotność: </p>
+          <p class="humidity weather-info--bold"></p>
+        </div>
+        <div class="main__box3--wind weather-info">
+          <p>Wiatr: </p>
+          <p class="wind weather-info--bold"></p>
+        </div>
       </div>
     </section>
 
     <!-- Right aside-->
     <section class="rightAside">
-      <div class="rightAside__date showDate"></div>
+      <div class="rightAside__date">środa, 14 lipca 2019 12:54</div>
       <div class="rightAside__forcast">
         <ul class="rightAside__forcast--list">
           <li class="rightAside__forcast--listItem">
-            czwartek
-            <span class="rightAside__forcast--date"></span>
-            <span class="rightAside__forcast--icon"></span>
+            <p class="rightAside__forcast--day"></p>
+            <p class="rightAside__forcast--date"></p>
+            <span class="rightAside__forcast--icon"><img src="icons/rainy_3.svg" alt=""></span>
             <span class="rightAside__forcast--minMax">
               <p>min</p>
               <p>max</p>
             </span>
           </li>
           <li class="rightAside__forcast--listItem">
-            piątek
-            <span class="rightAside__forcast--date"></span>
-            <span class="rightAside__forcast--icon"></span>
+            <p class="rightAside__forcast--day"></p>
+            <p class="rightAside__forcast--date"></p>
+            <span class="rightAside__forcast--icon"><img src="icons/rainy_3.svg" alt=""></span>
             <span class="rightAside__forcast--minMax">
               <p>min</p>
               <p>max</p>
             </span>
           </li>
           <li class="rightAside__forcast--listItem">
-            sobota
-            <span class="rightAside__forcast--date"></span>
-            <span class="rightAside__forcast--icon"></span>
+            <p class="rightAside__forcast--day"></p>
+            <p class="rightAside__forcast--date"></p>
+            <span class="rightAside__forcast--icon"><img src="icons/rainy_3.svg" alt=""></span>
             <span class="rightAside__forcast--minMax">
               <p>min</p>
               <p>max</p>
             </span>
           </li>
           <li class="rightAside__forcast--listItem">
-            niedziela
-            <span class="rightAside__forcast--date"></span>
-            <span class="rightAside__forcast--icon"></span>
+            <p class="rightAside__forcast--day"></p>
+            <p class="rightAside__forcast--date"></p>
+            <span class="rightAside__forcast--icon"><img src="icons/rainy_3.svg" alt=""></span>
             <span class="rightAside__forcast--minMax">
               <p>min</p>
               <p>max</p>
             </span>
           </li>
           <li class="rightAside__forcast--listItem">
-            poniedzialek
-            <span class="rightAside__forcast--date"></span>
-            <span class="rightAside__forcast--icon"></span>
+            <p class="rightAside__forcast--day"></p>
+            <p class="rightAside__forcast--date"></p>
+            <span class="rightAside__forcast--icon"><img src="icons/rainy_3.svg" alt=""></span>
             <span class="rightAside__forcast--minMax">
               <p>min</p>
               <p>max</p>
