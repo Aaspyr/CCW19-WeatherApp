@@ -42,12 +42,12 @@
 
         &--date {
             flex-basis: 30%;
-            width: 127px;
+            width: 12.7rem;
         }
 
-        &--icon {
+        &--icon > img {
             flex-grow: 1;
-            width: 127px;
+            width: 5rem;
         }
 
         &--minMax {
@@ -55,7 +55,7 @@
             flex-direction: column;
             justify-content: center;
             flex-grow: 1;
-            width: 142px;
+            width: 14.2rem;
         }
     }
 }
