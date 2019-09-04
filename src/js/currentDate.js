@@ -1,4 +1,4 @@
-const dateInApp = document.getElementsByClassName('rightAside__date');
+const dateInApp = document.getElementsByClassName('showDate');
 
 function showDate() {
     let currentDate = new Date();
