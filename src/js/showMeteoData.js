@@ -1,12 +1,12 @@
 import getMeteoData from "./meteoData"
 
-//funckcja odpowiedzialna za wyświetlanie danych pogodowych
-const showMeteoData = async () => {
-    const meteo = await getMeteoData("Warszawa");
+const showMeteoData = async (city) => {
+    const meteo = await getMeteoData(city);
     const days = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
     const month = ["Stycznia", "Lutego", "Marca", "Kwietnia", "Maja", "Czerwca", "Lipca", "Sierpnia", "Września", "Października", "Listopada", "Grudnia"];
     console.log(meteo)
     // stan na obecny dzień
+    document.getElementsByClassName("main__box1--header header")[0].innerHTML = city;
     document.getElementsByClassName("main__box2--temp header")[0].innerHTML = `${meteo[0].temp}&deg;C`;
     document.getElementsByClassName("main__box2--minTemp")[0].innerHTML = `temp. min. ${meteo[0].temp_min}&deg;C`;
     document.getElementsByClassName("main__box2--maxTemp")[0].innerHTML = `temp. max. ${meteo[0].temp_max}&deg;C`;
@@ -55,6 +55,5 @@ const showMeteoData = async () => {
         element.innerHTML = `temp. max: ${meteo[i+1].temp_max}&deg;C`;
     });
 }
-
-
-showMeteoData();
+showMeteoData('Warszawa')
+export {showMeteoData};
