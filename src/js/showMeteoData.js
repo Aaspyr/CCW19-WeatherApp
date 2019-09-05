@@ -2,7 +2,7 @@ import getMeteoData from "./meteoData"
 
 //funckcja odpowiedzialna za wyświetlanie danych pogodowych
 const showMeteoData = async () => {
-    const meteo = await getMeteoData("Warszawa");
+    const meteo = await getMeteoData("Wrocław");
     const days = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
     const month = ["Stycznia", "Lutego", "Marca", "Kwietnia", "Maja", "Czerwca", "Lipca", "Sierpnia", "Września", "Października", "Listopada", "Grudnia"];
     console.log(meteo)
@@ -13,26 +13,6 @@ const showMeteoData = async () => {
     document.getElementsByClassName("pressure")[0].textContent = `${meteo[0].pressure}hPa`;
     document.getElementsByClassName("humidity")[0].textContent = `${meteo[0].humidity}%`;
     document.getElementsByClassName("wind")[0].textContent = `${meteo[0].wind_speed}km/h`;
-
-    const information = document.getElementsByClassName("main__box1--paragraph")[0];
-    const description = meteo[0].description;
-    console.log(description);
-    switch (description) {
-        case "clear sky":
-            information.textContent = "Nie pada!";
-            break;
-        case "scattered clouds":
-            information.textContent = "Występują lekkie chmurki, ale nie pada!";
-            break;
-        case "overcast clouds":
-            information.textContent = "Występuje zachmurzenie, ale nie pada!";
-            break;
-        case "light rain":
-            information.textContent = "Może wystąpić lekki deszczyk!";
-            break;
-        default:
-            information.textContent = description;
-    }
 
     //stan na następne 5 dni
     const nextDays = document.querySelectorAll(".rightAside__forcast--day");
@@ -54,7 +34,98 @@ const showMeteoData = async () => {
     nextDaysTempMax.forEach((element, i) => {
         element.innerHTML = `temp. max: ${meteo[i+1].temp_max}&deg;C`;
     });
-}
 
+    //pokazywanie informacji pod miastem i ikon informujących o pogdzie
+    const information = document.getElementsByClassName("main__box1--paragraph")[0];
+    const mainIcon = document.getElementsByClassName("main__box1--icon")[0];
+    const rightIcon = document.querySelectorAll(".rightAside__forcast--icon > img");
+    console.log(rightIcon);
+    meteo.forEach((day, i)=>{
+        let icon = day.icon.substr(0,2);
+        switch(icon){
+            case "01":
+                if(i==0){
+                    information.textContent = 'Nie pada, świeci piękne słoneczko!';
+                    mainIcon.style.background = 'url("../src/icons/day.svg") no-repeat center center/contain';
+                    break;}
+                else{
+                    rightIcon[i-1].outerHTML = '<img src="../src/icons/day.svg" alt="">';
+                    break;
+                }
+            case "02":
+                if(i==0){
+                    information.textContent = 'Nie pada, ale są lekkie chmurki!';
+                    mainIcon.style.background = 'url("../src/icons/cloudy_day_1.svg") no-repeat center center/contain';
+                    break;}
+                else{
+                    rightIcon[i-1].outerHTML = '<img src="../src/icons/cloudy_day_1.svg" alt="">';
+                    break;
+                    }
+            case "03":
+                if(i==0){
+                    information.textContent = 'Nie pada, ale niebo jest zachmurzone!';
+                    mainIcon.style.background = 'url("../src/icons/cloudy.svg") no-repeat center center/contain';
+                    break;}
+                else{
+                    rightIcon[i-1].outerHTML = '<img src="../src/icons/cloudy.svg" alt="">';
+                    break;
+                    }
+            case "04":
+                if(i==0){
+                    information.textContent = 'Nie pada, ale na niebie grasują groźne chmurki!';
+                    mainIcon.style.background = 'url("../src/icons/cloudy.svg") no-repeat center center/contain';
+                    break;}
+                else{
+                    rightIcon[i-1].outerHTML = '<img src="../src/icons/cloudy.svg" alt="">';
+                    break;
+                    } 
+            case "09":
+                if(i==0){
+                    information.textContent = 'Ojoj pada, weź parasol!';
+                    mainIcon.style.background = 'url("../src/icons/rainy_6.svg") no-repeat center center/contain';
+                    break;}
+                else{
+                    rightIcon[i-1].outerHTML = '<img src="../src/icons/rainy_6.svg" alt="">';
+                    break;
+                    }
+            case "10":
+                if(i==0){
+                    information.textContent = 'Ojoj pada, weź parasol!';
+                    mainIcon.style.background = 'url("../src/icons/rainy_3.svg") no-repeat center center/contain';
+                    break;}
+                else{
+                    rightIcon[i-1].outerHTML = '<img src="../src/icons/rainy_3.svg" alt="">';
+                    break;
+                    }
+            case "11":
+                if(i==0){
+                    information.textContent = 'Burza, chowaj się kto może!';
+                    mainIcon.style.background = 'url("../src/icons/rainy_6.svg") no-repeat center center/contain';
+                    break;}
+                else{
+                    rightIcon[i-1].outerHTML = '<img src="../src/icons/rainy_6.svg" alt="">';
+                    break;
+                    }
+            case "13":
+                if(i==0){
+                    information.textContent = 'Pada śnieg, zaopatrz się w jakieś rękawiczki!';
+                    mainIcon.style.background = 'url("../src/icons/snowy_6.svg") no-repeat center center/contain';
+                    break;}
+                else{
+                    rightIcon[i-1].outerHTML = '<img src="../src/icons/snowy_6.svg" alt="">';
+                    break;
+                    }
+            case "50":
+                if(i==0){
+                    information.textContent = 'Mgła';
+                    mainIcon.style.background = 'url("../src/icons/") no-repeat center center/contain';
+                    break;}
+                else{
+                    rightIcon[i-1].outerHTML = '<img src="../src/icons/snowy_6.svg" alt="">';
+                    break;
+                    }
+        }
+    })
+}
 
 showMeteoData();
