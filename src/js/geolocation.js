@@ -7,7 +7,6 @@ const btnWeather = document
 // Prevent form submit
 document.querySelector(".leftAsideBox__chooseCity--button").addEventListener('click',(event)=>event.preventDefault());
 const divPos = document.querySelector(".main__box1--header");
-const divWeather = document.querySelector(".main__box1--paragraph");
 
 let myRes;
 
@@ -29,13 +28,6 @@ function showPosition(position) {
     .then(data => {
       myRes=data;
       divPos.innerHTML = myRes.name;
-      //TODO - poprawić kod żeby wyświetlał dane tam gdzie powinien ;) 
-      
-      // `Twoje miasto: ${myRes.name}<br>
-      // Szerokość geograficzna (Latitude): ${lat}<br>
-      // Długość geograficzna (Longitude): ${lon}`;
-      // divWeather.innerHTML = `
-      // The weather in ${myRes.name} is: ${myRes.weather[0].main}`
     })
 };
 
@@ -56,8 +48,7 @@ async function getCity(){
 // Get weather for city from input
 async function getWeather(){
   await getCity();
-  divWeather.innerHTML = `
-    The weather in ${myRes.name} is: ${myRes.weather[0].main}`;
+  divPos.innerHTML = myRes.name;
 };
 
 getLocation();
