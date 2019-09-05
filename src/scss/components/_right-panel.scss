@@ -21,6 +21,9 @@
             flex-direction: column;
             height: 100%;
             list-style-type: none;
+            @include respons(tablet) {
+                flex-direction: row;
+            }
 
             &:last-child {
                 border-bottom: 1px solid $color-white-transparent;
@@ -34,6 +37,7 @@
             border: 1px solid $color-white-transparent;
             border-bottom: none;
             padding: 1rem;
+            flex: 1;
         }
 
         &--day {

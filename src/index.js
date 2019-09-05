@@ -6,6 +6,4 @@ import "./js/loadingScreen"
 import "./js/currentDate"
 import "./js/readingInput"
 import "./js/errorHandling"
-// import "./js/showMeteoData"
-
 
