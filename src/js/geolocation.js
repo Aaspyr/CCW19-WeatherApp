@@ -1,15 +1,12 @@
-const btnPos = document
-    .querySelector(".leftAsideBox__findCity--button")
-    .addEventListener('click', getLocation);
+import { showMeteoData } from "./showMeteoData"
 
-//Prevent form submit
+// Prevent form submit
 document.querySelector(".leftAsideBox__chooseCity--button").addEventListener('click',(event)=>event.preventDefault());
 const divPos = document.querySelector(".main__box1--header");
-const divWeather = document.querySelector(".main__box1--paragraph");
 
-let myRes;
+let cityData;
 
-//Get location of navigator
+// Get location of navigator
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, error);
@@ -25,16 +22,10 @@ function showPosition(position) {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      myRes=data;
-      divPos.innerHTML = myRes.name;
-      //TODO - poprawić kod żeby wyświetlał dane tam gdzie powinien ;) 
-      
-      // `Twoje miasto: ${myRes.name}<br>
-      // Szerokość geograficzna (Latitude): ${lat}<br>
-      // Długość geograficzna (Longitude): ${lon}`;
-      // divWeather.innerHTML = `
-      // The weather in ${myRes.name} is: ${myRes.weather[0].main}`
-     })
+      cityData=data;
+      divPos.innerHTML = cityData.name;
+      showMeteoData(cityData.name)
+    })
 };
 
 function error(err) {
@@ -43,3 +34,4 @@ function error(err) {
 };
 
 getLocation();
+export {getLocation}
