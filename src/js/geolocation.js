@@ -8,7 +8,7 @@ const btnWeather = document
 document.querySelector(".leftAsideBox__chooseCity--button").addEventListener('click',(event)=>event.preventDefault());
 const divPos = document.querySelector(".main__box1--header");
 
-let myRes;
+let cityData;
 
 // Get location of navigator
 function getLocation() {
@@ -26,8 +26,8 @@ function showPosition(position) {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      myRes=data;
-      divPos.innerHTML = myRes.name;
+      cityData=data;
+      divPos.innerHTML = cityData.name;
     })
 };
 
@@ -42,13 +42,13 @@ async function getCity(){
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${inputCity}&APPID=307b855de38a960270e1caa9d305240a`;
   const response = await fetch(url);
   const result = await response.json();
-  myRes=result;
+  cityData=result;
 };
 
 // Get weather for city from input
 async function getWeather(){
   await getCity();
-  divPos.innerHTML = myRes.name;
+  divPos.innerHTML = cityData.name;
 };
 
 getLocation();
