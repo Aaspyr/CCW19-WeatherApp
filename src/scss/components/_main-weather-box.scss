@@ -1,12 +1,21 @@
 .main-positioner{
-  max-width: 35rem;
+  width: 35rem;
   margin: 0 auto;
+  @include respons(tablet) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .main {
   text-align: center;
   align-self: center;
   flex: 1;
+  @include respons(tablet) {
+    position: relative;
+  }
 
   &__box1 {
     position: relative;
