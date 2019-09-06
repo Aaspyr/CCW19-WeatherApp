@@ -1,13 +1,17 @@
+.main-positioner{
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
 .main {
   text-align: center;
   align-self: center;
+  flex: 1;
 
   &__box1 {
     position: relative;
     margin-bottom: 2rem;
     &--icon {
-      background: url("./../icons/cloudy-day-2.svg") no-repeat center center /
-        contain;
       position: absolute;
       right: -25%;
       top: -40%;
