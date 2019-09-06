@@ -1,9 +1,5 @@
-const btnPos = document
-    .querySelector(".leftAsideBox__findCity--button")
-    .addEventListener('click', getLocation);
-const btnWeather = document
-    .querySelector(".leftAsideBox__chooseCity--button")
-    .addEventListener('click', getWeather);
+import { showMeteoData } from "./showMeteoData"
+
 // Prevent form submit
 document.querySelector(".leftAsideBox__chooseCity--button").addEventListener('click',(event)=>event.preventDefault());
 const divPos = document.querySelector(".main__box1--header");
@@ -34,6 +30,7 @@ function showPosition(position) {
     .then(data => {
       cityData=data;
       divPos.innerHTML = cityData.name;
+      showMeteoData(cityData.name)
     })
 };
 
@@ -64,3 +61,4 @@ async function getWeather(){
 };
 
 getLocation();
+export {getLocation}

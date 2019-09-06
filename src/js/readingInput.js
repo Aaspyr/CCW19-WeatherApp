@@ -1,8 +1,10 @@
 import { showMeteoData } from "./showMeteoData"
+import { getLocation} from "./geolocation"
 
 const input = document.querySelector('.leftAsideBox__chooseCity--input')
 const inputButton = document.querySelector('.leftAsideBox__chooseCity--button')
-//const findButton = document.querySelector('.leftAsideBox__findCity--button')
+
+const findButton = document.querySelector('.leftAsideBox__findCity--button')
 
 const cityString = () => {
     const inputValue =input.value.toString()
@@ -15,3 +17,4 @@ function showInput () {
 }
 
 inputButton.onclick = showInput;
+findButton.onclick = getLocation;
