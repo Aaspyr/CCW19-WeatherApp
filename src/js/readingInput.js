@@ -14,6 +14,7 @@ const cityString = () => {
 function showInput () {
     const city = cityString();
     showMeteoData(city);
+    input.value = ""
 }
 
 inputButton.onclick = showInput;
