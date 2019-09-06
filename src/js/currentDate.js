@@ -7,6 +7,7 @@ function showDate() {
     let year = currentDate.getFullYear();
     let hours = currentDate.getHours();
     let minutes = currentDate.getMinutes();
+    let seconds = currentDate.getSeconds();
     if (minutes < 10) {
         minutes = "0" + minutes;
     }
@@ -97,5 +98,6 @@ function showDate() {
     }
 
     document.getElementsByClassName('showDate')[0].innerHTML = day + ", " + numberDay + " " + month + " " + year + " " + hours + ":" + minutes;
-}
-showDate()
+};
+showDate();
+setInterval(showDate, 1000);
