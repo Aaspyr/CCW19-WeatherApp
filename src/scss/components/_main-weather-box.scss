@@ -7,6 +7,9 @@
     top: 50%;
     transform: translate(-50%, -50%);
   }
+  @include respons(phone) {
+    width: 26rem;
+  }
 }
 
 .main {
@@ -26,6 +29,10 @@
       top: -40%;
       height: 11rem;
       width: 11rem;
+      @include respons(phone) {
+        height: 8rem;
+        width: 8rem;
+            }
     }
     &--paragraph {
       font-size: 1.9rem;
@@ -37,6 +44,11 @@
     align-items: center;
     div {
       padding: 1rem;
+    }
+    &--minMax{
+      @include respons(phone) {
+        text-align: left;
+      }
     }
   }
 
