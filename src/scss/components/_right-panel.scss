@@ -46,6 +46,9 @@
             border-bottom: none;
             padding: 1rem;
             flex: 1;
+            @include respons(tablet) {
+                text-align: center;
+            }
         }
 
         &--day {
@@ -54,7 +57,6 @@
 
         &--date {
             flex-basis: 30%;
-            width: 12.7rem;
         }
 
         &--icon > img {
@@ -67,7 +69,6 @@
             flex-direction: column;
             justify-content: center;
             flex-grow: 1;
-            width: 14.2rem;
         }
     }
 }

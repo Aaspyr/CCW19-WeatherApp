@@ -6,6 +6,9 @@
     width: 323px;
     height: 100%;
     background-color: $color-transparent-leftAside;
+    @include respons(phone) {
+        display: none;
+      }
 
     &__image {
         position: absolute;
