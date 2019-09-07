@@ -11,6 +11,7 @@ const cityString = () => {
     const inputArray =  inputValue.split(", ");
     return inputArray[0];
 }
+
 function showInput () {
     const city = cityString();
     showMeteoData(city);
@@ -19,3 +20,4 @@ function showInput () {
 
 inputButton.onclick = showInput;
 findButton.onclick = getLocation;
+

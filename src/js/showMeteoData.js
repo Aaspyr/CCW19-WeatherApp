@@ -1,4 +1,5 @@
 import getMeteoData from "./meteoData"
+import { saveLastInput } from "./localStorage"
 
 const showMeteoData = async (city) => {
     try {
@@ -14,6 +15,9 @@ const showMeteoData = async (city) => {
         document.getElementsByClassName("humidity")[0].textContent = `${meteo[0].humidity}%`;
         document.getElementsByClassName("wind")[0].textContent = `${meteo[0].wind_speed}km/h`;
     
+    // zapisuje ostatnio wyszukiwane miasto do localStorage
+    saveLastInput(city);
+
         //stan na następne 5 dni
         const nextDays = document.querySelectorAll(".rightAside__forcast--day");
         const nextDaysDate = document.querySelectorAll(".rightAside__forcast--date");
@@ -136,5 +140,5 @@ const showMeteoData = async (city) => {
         setTimeout(before, 2000);
     }
 }
-showMeteoData('Warszawa')
+//showMeteoData("warszawa")
 export {showMeteoData};
