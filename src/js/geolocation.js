@@ -11,7 +11,7 @@ function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, error);
   } else { 
-    const main = document.querySelector(".main");
+    const main = document.querySelector(".main-positioner");
     const node = document.createElement("div");
     const textnode = document.createTextNode("Geolocation is not supported by this browser.");
     const child = document.querySelector(".main__box1"); 
@@ -36,7 +36,7 @@ function showPosition(position) {
 
 function error(err) {
   console.warn(`ERROR(${err.code}): ${err.message}`);
-    const main = document.querySelector(".main");
+    const main = document.querySelector(".main-positioner");
     const node = document.createElement("div");
     const textnode = document.createTextNode("geolokalizacja niedostępna");
     const child = document.querySelector(".main__box1"); 
