@@ -16,7 +16,11 @@
     background-color: $color-transparent-leftAside;
     @include respons(phone) {
         margin-left: -323px;
-        background-color: $color-light-blue;
+        background: linear-gradient(
+            180deg,
+            $color-dark-blue 0%,
+            $color-light-blue 100%
+            );
         transition: 0.5s;
     }
 
