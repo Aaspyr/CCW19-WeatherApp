@@ -1,3 +1,10 @@
+.leftAside {
+    @include respons(phone) {
+        width: 0;
+        z-index: 1;
+      }
+}
+
 .leftAsideBox {
     display: flex;
     flex-direction: column;
@@ -5,10 +12,26 @@
     justify-content: center;
     width: 323px;
     height: 100%;
+    position: relative;
     background-color: $color-transparent-leftAside;
     @include respons(phone) {
+        margin-left: -323px;
+        background-color: $color-light-blue;
+        transition: 0.5s;
+    }
+
+    .closebtn{
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+        color: $color-white;
+        text-decoration: none;
+        font-size: 4rem;
         display: none;
-      }
+        @include respons(phone) {
+            display: inline;
+          }
+    }
 
     &__image {
         position: absolute;

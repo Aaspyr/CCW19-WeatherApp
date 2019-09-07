@@ -18,6 +18,20 @@
   flex: 1;
   @include respons(tablet) {
     position: relative;
+    width: 100%;
+  }
+
+  .openbtn{
+    position: absolute;
+        top: 1.5rem;
+        left: 2rem;
+        color: $color-white;
+        text-decoration: none;
+        font-size: 3.5rem;
+        display: none;
+        @include respons(phone) {
+            display: inline;
+          }
   }
 
   &__box1 {

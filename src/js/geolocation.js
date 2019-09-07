@@ -44,21 +44,5 @@ function error(err) {
     node.appendChild(textnode);                        
     main.insertBefore(node, child); 
 };
-// wydaje mi się, że ten zakomentowany fragment jest niepotrzebny, to jest to samo co readingInput i nie mam pojecie czy to działa
-// Get city from input
-// async function getCity(){
-//   const inputCity = document.querySelector('.leftAsideBox__chooseCity--input').value;
-//   const url = `http://api.openweathermap.org/data/2.5/weather?q=${inputCity}&APPID=307b855de38a960270e1caa9d305240a`;
-//   const response = await fetch(url);
-//   const result = await response.json();
-//   cityData=result;
-// };
 
-// // Get weather for city from input
-// async function getWeather(){
-//   await getCity();
-//   divPos.innerHTML = cityData.name;
-// };
-
-//getLocation();
 export { getLocation }
