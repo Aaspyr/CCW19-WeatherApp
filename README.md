@@ -4,7 +4,7 @@ It's our weather aplication created for CodersCamp 2019!
 ## Znajdź to czego szukasz:
 
 1. [Ogólne informacje](#Ogólne-informacje)
-2. [Jak to wygląda](#[Jak-to-wygląda)
+2. [Jak to wygląda](#Jak-to-wygląda)
 3. [Użyte technologie](#Użyte-technologie)
 4. [Struktura plików aplikacji](#Struktura-plików-aplikacji)
 
@@ -15,6 +15,7 @@ Pada? jest aplikacją pogodową, któa pozwala uzyskać informację na temat bie
 Oto demo wersja naszej aplikacji : https://malgoskabou.github.io/CoolWeatherApp/
 
 Aplikacja jest intuicyjna i zawiera jeden główny ekran:
+![jj](./screen/main.png)
 
 Jeśli użytkownik poprzednio korzystał z aplikacji, po ponownym uruchomieniu będzie ona wyświetlała pogodę dla ostatniego zapisu. Jeśli użytkownik korzysta po raz pierwszy zostaną wyświetlone dane pogodowe dla dla miejsca, gdzie użytkownik zostanie zlokalizowany(gdy lokalizacja jest dostępna):
 
@@ -32,7 +33,7 @@ Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach,
 - Google Places API
 - Google Geolocation API
 
-## Gdzie szukać? - struktura plików aplikacji.
+## Struktura plików aplikacji.
 
 #### 1. src - folder gromadzący treści splikacji
 
@@ -50,7 +51,7 @@ Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach,
     - `meteoData.js` - pobieranie danych pogodowych,
     - `drawerAnimation.js` - zachowanie aplikacji przy zmniejszającym się ekranie.
 
-- **scss** 
+- **scss** - folder, w ktorym zawarta jest cała struktura css z podziałem na poszczegolne katalogi, zawierające                   pliki opisujące te same lub podobne struktury
 
     - **Base**:   folder zawierający animacje, style podstawowe, typografia, utiliesy i takie tam.
     - **Components**: folder zawierający po jednym pliku scss dla komponentu
@@ -58,12 +59,8 @@ Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach,
     - **Abstracts**: folder zawierający funkcje, mixiny, zmienne
     - `main.scss` : plik gdzie importujemy wszystkie pliki scss 💅
 
-    **UWAGA** - pliki scss w katalogach nazywamy zaczynając od podkreślnika np. `_moj-styl.scss` ale importujemy w `index.scss` bez podkreślnika.
-
-    **DLACZEGO?** - podkreślnik informuje SCSS, że dany plik jest tylko plikiem częściowym i że nie powinien być generowany w osobnym pliku CSS, tylko zaimportowany do większego pliku. Zapewne w związku z tym że korzytsamy z webpacka, będzie to działać równie dobrze bez podkreslnika, ale warto trzymać się jakiejś konwencji, a to jest równie dobra informacja dla innego programisty, który będzie potem oglądał nasz kod.
-
-    - `index.html` - struktura html aplikacji, pełni fundamentalną rolę.
-    - `index.js` - to właśnie index.js jest załączany przez webpack'a do naszego html i to włąsnie tu importujemy                       wszystkie pliki js aplikacji,
+- **`index.html`** - struktura html aplikacji, pełni fundamentalną rolę.
+- **`index.js`** - to właśnie index.js jest załączany przez webpack'a do naszego html i to włąsnie tu importujemy                       wszystkie pliki js aplikacji,
 
 #### 2. `package.json` - plik zawierający wszystkie informacje o tworzonym przez nas projekcie.
 #### 3. `package-lock.json` - plik, w którym przechowywane są szczegółowe informacje o zainstalowanych przez nas modułach.
