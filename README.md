@@ -1,42 +1,93 @@
-# CCW19-WeatherApp
+## PADA? - simply weatherApp
+It's our weather aplication created for CodersCamp 2019!
 
-## Konfiguracja webpacka
+# Znajdź to czego szukasz:
 
-Po co nam to?
+1. Ogólne informacjie
+2. Jak to wygląda
+3. Użyte technologie
+4. Gdzie szukać? - struktura plików aplikacji.
+5. Jak uruchomić aplikację.
 
-Webpack pozwoli nam stworzyć wersję produkcyjną naszej aplikacji.
+# Ogólne informacje.
+Pada? jest aplikacją pogodową, któa pozwala uzyskać informację na temat bieżących, a także przyszłych warunków pogodowych wybranej lokalizacji. Informacje wykorzystywane w naszej aplikacji pochodzą z "Hourly forecast by OpenWeatherMap!".
 
-1. Jak używać?
+# Jak to wygląda? - wersja demo i grafiki aplikacji.
+Oto demo wersja naszej aplikacji : https://malgoskabou.github.io/CoolWeatherApp/
 
-   Odpalamy konsole i przechodzimy do głównego katalogu projektu - instalujemy wszystkie biblioteki za pomocą `npm install`.
+Aplikacja jest intuicyjna i zawiera jeden główny ekran:
 
-- wpisujemy polecenie: `npm run build`
-  i naciskamy enter żeby zbudować projekt
-- wpisujemy polecenie: `npm run dev` i naciskamy enter żeby odpalić serwer developerski
-  dzięki temu możemy wprowadzać zmiany w kodzie a strona będzie automatycznie je pokazywać w przeglądarce po zapisaniu.
+Jeśli użytkownik poprzednio korzystał z aplikacji, po ponownym uruchomieniu będzie ona wyświetlała pogodę dla ostatniego zapisu. Jeśli użytkownik korzysta po raz pierwszy zostaną wyświetlone dane pogodowe dla dla miejsca, gdzie użytkownik zostanie zlokalizowany(gdy lokalizacja jest dostępna):
+
+Użytkownik uzyskuje szczegółowe informacje na temat pogody wybranego miasta w konkretnym dniu:
+
+A takaże ogólne informacje na temat pogody w najbliższych dniach:
+
+W każdej chwili istnieje możliwość zmiany lokalizacji, zarówno po wpisaniu konkretniej miejscowości(pomocą jest tu lista  podpowiedzi miejscowości w Polsce) jak i po geolokalizacji:
+
+Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach, jak np. błędnie wpisane miastobr czy ak zgody na lokalizację:
+
+# Użyte technologie.
+- HTML, CSS,
+- JS,
+- Google Places API
+- Google Geolocation API
+
+# Gdzie szukać? - struktura plików aplikacji.
+
+1. src
+ - **icons** - tu znajdziesz wykorzystane w aplikacji ikonki
+
+- **js** - folder będący pudełkiem na wszystkie js'owe skrypty:
+    -`currenDate.js` - plik z kodem pobierającym aktualną datę,
+    -`geolocation.js` - plik z funkcją geolokalizacji,
+    -`townSearcher.js` - plik z kodem do podpowiedzi w wyszukiwaniu miast,
+    -`loadingScreen.js`- kod dla ekranu ładowania strony,
+    -`errorHandling.js` - obsługa błędów,
+    -`readingInput.js`- kod pobierający lokalizację lub wpisane miasto do wyświetlania pogody,
+    -`localStorage.js` - kod odpowiedzialny za zapamiętywanie ostatnio wyświetlanego miasta w localStorage,
+    -`showMeteoData.js` - wyświetlanie danych pogodowych,
+    -`meteoData.js` - pobieranie danych pogodowych,
+    -`drawerAnimation.js` - zachowanie aplikacji przy zmniejszającym się ekranie.
+
+- **scss** 
+
+    - **Base**:   folder zawierający animacje, style podstawowe, typografia, utiliesy i takie tam.
+    - **Components**: folder zawierający po jednym pliku scss dla komponentu
+    - **Pages**: folder zawierający po jednym pliku scss dla strony
+    - **Abstracts**: folder zawierający funkcje, mixiny, zmienne
+    - `main.scss` : plik gdzie importujemy wszystkie pliki scss 💅
+
+    **UWAGA** - pliki scss w katalogach nazywamy zaczynając od podkreślnika np. `_moj-styl.scss` ale importujemy w `index.scss` bez podkreślnika.
+
+    **DLACZEGO?** - podkreślnik informuje SCSS, że dany plik jest tylko plikiem częściowym i że nie powinien być generowany w osobnym pliku CSS, tylko zaimportowany do większego pliku. Zapewne w związku z tym że korzytsamy z webpacka, będzie to działać równie dobrze bez podkreslnika, ale warto trzymać się jakiejś konwencji, a to jest równie dobra informacja dla innego programisty, który będzie potem oglądał nasz kod.
+
+    - `index.html` - struktura html aplikacji, pełni fundamentalną rolę.
+    - `index.js` - to właśnie index.js jest załączany przez webpack'a do naszego html i to włąsnie tu importujemy                       wszystkie pliki js aplikacji,
+
+2. `package.json` - plik zawierający wszystkie informacje o tworzonym przez nas projekcie.
+3. `package-lock.json` - plik, w którym przechowywane są szczegółowe informacje o zainstalowanych przez nas modułach.
+4. `webpack.config.js`  - plik zawierający konfigurację webpack'a.
+    Po co nam to?
+
+    Webpack pozwola stworzyć wersję produkcyjną aplikacji.
+    **JAK UŻYWAĆ**
+
+    Odpalamy konsole i przechodzimy do głównego katalogu projektu - instalujemy wszystkie biblioteki za pomocą `npm install`.
+
+    - wpisujemy polecenie: `npm run build`
+    i naciskamy enter żeby zbudować projekt
+    - wpisujemy polecenie: `npm run dev` i naciskamy enter żeby odpalić serwer developerski
+    dzięki temu możemy wprowadzać zmiany w kodzie a strona będzie automatycznie je pokazywać w przeglądarce po zapisaniu.
   
-WAŻNE - jak działa webpack?
----
+    **Jak działa webpack?**
 
-Piszę to co wiem...
+    Webpack zbiera wszystko co jest dodane do pliku `index.js` i robi z tego paczkę, którą będziemy mogli wrzucić na serwer jak będziemy chcieli nasz projekt udostępnić oline.
+    Jeżeli dodajemy jakiś kod JS to nie ma potrzeby wrzucać go w index.html w tagach <script> bo webpack zrobi to za nas - na tym polega właśnie automatyzacja jaką nam oferuje. 
+    Najważniejsze żeby nasz kod zaimportować w pliku `index.js`
+    
+5. `README.md` -here we are! readme to dokument, który pozowli Ci poruszać sie po aplikacji.
 
-Webpack zbiera wszystko co jest dodane do pliku `index.js` i robi z tego paczkę, którą będziemy mogli wrzucić na serwer jak będziemy chcieli nasz projekt udostępnić oline.
-Jeżeli dodajemy jakiś kod JS to nie ma potrzeby wrzucać go w index.html w tagach <script> bo webpack zrobi to za nas - na tym polega właśnie automatyzacja jaką nam oferuje. 
-Najważniejsze żeby nasz kod zaimportować w pliku `index.js`
 
-## Struktura katalogów scss
 
-Gdzie i co pakować:
 
-- **Base**: animacje, style podstawowe, typografia, utiliesy i takie tam.
-- **Components**: po jednym pliku scss dla komponentu
-- **Pages**: po jednym pliku scss dla strony
-- **Abstracts**: funkcje, mixiny, zmienne
-
-Wszytskie pliki importujemy w `main.scss`, ktory siedzi w głównym katalogu 💅
-
-**UWAGA** - pliki scss w katalogach nazywamy zaczynając od podkreślnika np. `_moj-styl.scss` ale importujemy w `index.scss` bez podkreślnika.
-
-**DLACZEGO?** - podkreślnik informuje SCSS, że dany plik jest tylko plikiem częściowym i że nie powinien być generowany w osobnym pliku CSS, tylko zaimportowany do większego pliku. Zapewne w związku z tym że korzytsamy z webpacka, będzie to działać równie dobrze bez podkreslnika, ale warto trzymać się jakiejś konwencji, a to jest równie dobra informacja dla innego programisty, który będzie potem oglądał nasz kod.
-
-PÓŻNIEJ NAPISZE WIĘCEJ.... 😸 wszelkie pomysły i sugestie mile widziane 
