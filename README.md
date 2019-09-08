@@ -4,10 +4,9 @@ It's our weather aplication created for CodersCamp 2019!
 ## Znajdź to czego szukasz:
 
 1. [Ogólne informacje](#Ogólne-informacje)
-2. [Jak to wygląda](#Jak-to-wygląda)
-3. [Użyte technologie](#Użyte-technologie)
-4. [Gdzie szukać?-struktura plików aplikacji](#Gdzie-szukać?-struktura-plików-aplikacji)
-5. [Jak uruchomić aplikację](#Jak-uruchomić-aplikację])
+2. [Jak to wygląda](#Jak-to-wyglada)
+3. [Użyte technologie](#Uzyte-technologie)
+4. [Struktura plików aplikacji](Struktura-plikow-aplikacji)
 
 ## Ogólne informacje.
 Pada? jest aplikacją pogodową, któa pozwala uzyskać informację na temat bieżących, a także przyszłych warunków pogodowych wybranej lokalizacji. Informacje wykorzystywane w naszej aplikacji pochodzą z "Hourly forecast by OpenWeatherMap!".
