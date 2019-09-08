@@ -15,7 +15,7 @@ Pada? jest aplikacją pogodową, któa pozwala uzyskać informację na temat bie
 Oto demo wersja naszej aplikacji : https://malgoskabou.github.io/CoolWeatherApp/
 
 Aplikacja jest intuicyjna i zawiera jeden główny ekran:
-![jj](./screen/main.png)
+![jj](./screens/main.png)
 
 Jeśli użytkownik poprzednio korzystał z aplikacji, po ponownym uruchomieniu będzie ona wyświetlała pogodę dla ostatniego zapisu. Jeśli użytkownik korzysta po raz pierwszy zostaną wyświetlone dane pogodowe dla dla miejsca, gdzie użytkownik zostanie zlokalizowany(gdy lokalizacja jest dostępna):
 
