@@ -1,3 +1,7 @@
+*:focus {
+    outline: none;
+}
+
 .leftAsideBox {
     display: flex;
     flex-direction: column;
