@@ -34,20 +34,20 @@ Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach,
 
 ## Gdzie szukać? - struktura plików aplikacji.
 
-1. src
+### 1. src
  - **icons** - tu znajdziesz wykorzystane w aplikacji ikonki
 
 - **js** - folder będący pudełkiem na wszystkie js'owe skrypty:
-    -`currenDate.js` - plik z kodem pobierającym aktualną datę,
-    -`geolocation.js` - plik z funkcją geolokalizacji,
-    -`townSearcher.js` - plik z kodem do podpowiedzi w wyszukiwaniu miast,
-    -`loadingScreen.js`- kod dla ekranu ładowania strony,
-    -`errorHandling.js` - obsługa błędów,
-    -`readingInput.js`- kod pobierający lokalizację lub wpisane miasto do wyświetlania pogody,
-    -`localStorage.js` - kod odpowiedzialny za zapamiętywanie ostatnio wyświetlanego miasta w localStorage,
-    -`showMeteoData.js` - wyświetlanie danych pogodowych,
-    -`meteoData.js` - pobieranie danych pogodowych,
-    -`drawerAnimation.js` - zachowanie aplikacji przy zmniejszającym się ekranie.
+    - `currenDate.js` - plik z kodem pobierającym aktualną datę,
+    - `geolocation.js` - plik z funkcją geolokalizacji,
+    - `townSearcher.js` - plik z kodem do podpowiedzi w wyszukiwaniu miast,
+    - `loadingScreen.js`- kod dla ekranu ładowania strony,
+    - `errorHandling.js` - obsługa błędów,
+    - `readingInput.js`- kod pobierający lokalizację lub wpisane miasto do wyświetlania pogody,
+    - `localStorage.js` - kod odpowiedzialny za zapamiętywanie ostatnio wyświetlanego miasta w localStorage,
+    - `showMeteoData.js` - wyświetlanie danych pogodowych,
+    - `meteoData.js` - pobieranie danych pogodowych,
+    - `drawerAnimation.js` - zachowanie aplikacji przy zmniejszającym się ekranie.
 
 - **scss** 
 
@@ -64,9 +64,9 @@ Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach,
     - `index.html` - struktura html aplikacji, pełni fundamentalną rolę.
     - `index.js` - to właśnie index.js jest załączany przez webpack'a do naszego html i to włąsnie tu importujemy                       wszystkie pliki js aplikacji,
 
-2. `package.json` - plik zawierający wszystkie informacje o tworzonym przez nas projekcie.
-3. `package-lock.json` - plik, w którym przechowywane są szczegółowe informacje o zainstalowanych przez nas modułach.
-4. `webpack.config.js`  - plik zawierający konfigurację webpack'a.
+### 2. `package.json` - plik zawierający wszystkie informacje o tworzonym przez nas projekcie.
+### 3. `package-lock.json` - plik, w którym przechowywane są szczegółowe informacje o zainstalowanych przez nas modułach.
+### 4. `webpack.config.js`  - plik zawierający konfigurację webpack'a.
     Po co nam to?
 
     Webpack pozwola stworzyć wersję produkcyjną aplikacji.
@@ -85,7 +85,7 @@ Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach,
     Jeżeli dodajemy jakiś kod JS to nie ma potrzeby wrzucać go w index.html w tagach <script> bo webpack zrobi to za nas - na tym polega właśnie automatyzacja jaką nam oferuje. 
     Najważniejsze żeby nasz kod zaimportować w pliku `index.js`
 
-5. `README.md` -here we are! readme to dokument, który pozowli Ci poruszać sie po aplikacji.
+### 5. `README.md` -here we are! readme to dokument, który pozowli Ci poruszać sie po aplikacji.
 
 
 
