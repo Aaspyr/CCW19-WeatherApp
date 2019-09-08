@@ -1,18 +1,18 @@
-## PADA? - simply weatherApp
+# PADA? - simply weatherApp
 It's our weather aplication created for CodersCamp 2019!
 
-# Znajdź to czego szukasz:
+## Znajdź to czego szukasz:
 
-1. Ogólne informacjie
-2. Jak to wygląda
-3. Użyte technologie
-4. Gdzie szukać? - struktura plików aplikacji.
+1. [Ogólne informacje](#Ogólne-informacje)
+2. [Jak to wygląda](#Jak-to-wygląda)
+3. [Użyte technologie](#Użyte technologie)
+4. [Gdzie szukać? - struktura plików aplikacji.]
 5. Jak uruchomić aplikację.
 
-# Ogólne informacje.
+## Ogólne informacje.
 Pada? jest aplikacją pogodową, któa pozwala uzyskać informację na temat bieżących, a także przyszłych warunków pogodowych wybranej lokalizacji. Informacje wykorzystywane w naszej aplikacji pochodzą z "Hourly forecast by OpenWeatherMap!".
 
-# Jak to wygląda? - wersja demo i grafiki aplikacji.
+## Jak to wygląda? - wersja demo i grafiki aplikacji.
 Oto demo wersja naszej aplikacji : https://malgoskabou.github.io/CoolWeatherApp/
 
 Aplikacja jest intuicyjna i zawiera jeden główny ekran:
@@ -27,13 +27,13 @@ W każdej chwili istnieje możliwość zmiany lokalizacji, zarówno po wpisaniu 
 
 Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach, jak np. błędnie wpisane miastobr czy ak zgody na lokalizację:
 
-# Użyte technologie.
+## Użyte technologie.
 - HTML, CSS,
 - JS,
 - Google Places API
 - Google Geolocation API
 
-# Gdzie szukać? - struktura plików aplikacji.
+## Gdzie szukać? - struktura plików aplikacji.
 
 1. src
  - **icons** - tu znajdziesz wykorzystane w aplikacji ikonki
@@ -85,7 +85,7 @@ Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach,
     Webpack zbiera wszystko co jest dodane do pliku `index.js` i robi z tego paczkę, którą będziemy mogli wrzucić na serwer jak będziemy chcieli nasz projekt udostępnić oline.
     Jeżeli dodajemy jakiś kod JS to nie ma potrzeby wrzucać go w index.html w tagach <script> bo webpack zrobi to za nas - na tym polega właśnie automatyzacja jaką nam oferuje. 
     Najważniejsze żeby nasz kod zaimportować w pliku `index.js`
-    
+
 5. `README.md` -here we are! readme to dokument, który pozowli Ci poruszać sie po aplikacji.
 
 
