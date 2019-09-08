@@ -4,9 +4,9 @@ It's our weather aplication created for CodersCamp 2019!
 ## Znajdź to czego szukasz:
 
 1. [Ogólne informacje](#Ogólne-informacje)
-2. [Jak to wygląda](#Jak-to-wyglada)
-3. [Użyte technologie](#Uzyte-technologie)
-4. [Struktura plików aplikacji](Struktura-plikow-aplikacji)
+2. [Jak to wygląda](#[Jak-to-wygląda)
+3. [Użyte technologie](#Użyte-technologie)
+4. [Struktura plików aplikacji](#Struktura-plików-aplikacji)
 
 ## Ogólne informacje.
 Pada? jest aplikacją pogodową, któa pozwala uzyskać informację na temat bieżących, a także przyszłych warunków pogodowych wybranej lokalizacji. Informacje wykorzystywane w naszej aplikacji pochodzą z "Hourly forecast by OpenWeatherMap!".
@@ -68,25 +68,22 @@ Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach,
 #### 2. `package.json` - plik zawierający wszystkie informacje o tworzonym przez nas projekcie.
 #### 3. `package-lock.json` - plik, w którym przechowywane są szczegółowe informacje o zainstalowanych przez nas modułach.
 #### 4. `webpack.config.js`  - plik zawierający konfigurację webpack'a.
-    Po co nam to?
 
-    Webpack pozwola stworzyć wersję produkcyjną aplikacji.
-    **JAK UŻYWAĆ**
+Webpack pozwola stworzyć wersję produkcyjną aplikacji.
+**JAK UŻYWAĆ**
 
-    Odpalamy konsole i przechodzimy do głównego katalogu projektu - instalujemy wszystkie biblioteki za pomocą `npm install`.
+Należy przejść do głównego katalogu projektu i zainstalować wszystkie biblioteki za pomocą `npm install`.
+Następni wpisujemy polecenie: `npm run build` i naciskamy enter żeby zbudować projekt.
 
-    - wpisujemy polecenie: `npm run build`
-    i naciskamy enter żeby zbudować projekt
-    - wpisujemy polecenie: `npm run dev` i naciskamy enter żeby odpalić serwer developerski
-    dzięki temu możemy wprowadzać zmiany w kodzie a strona będzie automatycznie je pokazywać w przeglądarce po zapisaniu.
+W celu uruchomienia serwera developerskiego wpisujemy polecenie: `npm run dev` i naciskamy enter. Dzięki temu możemy wprowadzać zmiany w kodzie a strona będzie automatycznie je pokazywać w przeglądarce po zapisaniu.
   
-    **Jak działa webpack?**
+**Jak działa webpack?**
 
-    Webpack zbiera wszystko co jest dodane do pliku `index.js` i robi z tego paczkę, którą będziemy mogli wrzucić na serwer jak będziemy chcieli nasz projekt udostępnić oline.
-    Jeżeli dodajemy jakiś kod JS to nie ma potrzeby wrzucać go w index.html w tagach <script> bo webpack zrobi to za nas - na tym polega właśnie automatyzacja jaką nam oferuje. 
-    Najważniejsze żeby nasz kod zaimportować w pliku `index.js`
+Webpack zbiera wszystko co jest dodane do pliku `index.js` i robi z tego paczkę, którą będziemy mogli wrzucić na serwer jak będziemy chcieli nasz projekt udostępnić oline.
+Jeżeli dodajemy jakiś kod JS to nie ma potrzeby wrzucać go w index.html w tagach <script> bo webpack zrobi to za nas - na tym polega właśnie automatyzacja jaką nam oferuje. 
+Najważniejsze żeby nasz kod zaimportować w pliku `index.js`
 
-### 5. `README.md` -here we are! readme to dokument, który pozowli Ci poruszać sie po aplikacji.
+#### 5. `README.md` -here we are! readme to dokument, który pozowli Ci poruszać sie po aplikacji.
 
 
 
