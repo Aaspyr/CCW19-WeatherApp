@@ -34,7 +34,8 @@ Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach,
 
 ## Gdzie szukać? - struktura plików aplikacji.
 
-### 1. src
+#### 1. src - folder gromadzący treści splikacji
+
  - **icons** - tu znajdziesz wykorzystane w aplikacji ikonki
 
 - **js** - folder będący pudełkiem na wszystkie js'owe skrypty:
@@ -64,9 +65,9 @@ Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach,
     - `index.html` - struktura html aplikacji, pełni fundamentalną rolę.
     - `index.js` - to właśnie index.js jest załączany przez webpack'a do naszego html i to włąsnie tu importujemy                       wszystkie pliki js aplikacji,
 
-### 2. `package.json` - plik zawierający wszystkie informacje o tworzonym przez nas projekcie.
-### 3. `package-lock.json` - plik, w którym przechowywane są szczegółowe informacje o zainstalowanych przez nas modułach.
-### 4. `webpack.config.js`  - plik zawierający konfigurację webpack'a.
+#### 2. `package.json` - plik zawierający wszystkie informacje o tworzonym przez nas projekcie.
+#### 3. `package-lock.json` - plik, w którym przechowywane są szczegółowe informacje o zainstalowanych przez nas modułach.
+#### 4. `webpack.config.js`  - plik zawierający konfigurację webpack'a.
     Po co nam to?
 
     Webpack pozwola stworzyć wersję produkcyjną aplikacji.
