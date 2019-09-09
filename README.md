@@ -24,15 +24,15 @@ Użytkownik uzyskuje szczegółowe informacje na temat pogody wybranego miasta w
 
 A takaże ogólne informacje na temat pogody w najbliższych dniach:
 
-![szczegółowa pogoda na dany dzień](./screens/next.png)
+![pogoda na przyszłe dni](./screens/next.png)
 
 W każdej chwili istnieje możliwość zmiany lokalizacji, zarówno po wpisaniu konkretniej miejscowości(pomocą jest tu lista  podpowiedzi miejscowości w Polsce) jak i po geolokalizacji:
 
-![szczegółowa pogoda na dany dzień](./screens/find.png)
+![wprowadź miasto lub zlokalizuj](./screens/find.png)
 
 Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach, jak np. błędnie wpisane miastobr czy ak zgody na lokalizację:
 
-![szczegółowa pogoda na dany dzień](./screens/error.png)
+![źle wpisane miasto](./screens/error.png)
 
 ## Użyte technologie.
 - HTML, CSS,
