@@ -12,7 +12,7 @@ Jako uczestnicy CodersCamp2019 stworzyliśmy swoją pierwszą aplikację pogodow
 
 ## Ogólne informacje.
 
-Pada? jest aplikacją pogodową, któa pozwala uzyskać informację na temat bieżących, a także przyszłych warunków pogodowych wybranej lokalizacji. Informacje wykorzystywane w naszej aplikacji pochodzą z "Hourly forecast by OpenWeatherMap!".
+Pada? jest aplikacją pogodową, która pozwala uzyskać informację na temat bieżących, a także przyszłych warunków pogodowych wybranej lokalizacji. Informacje wykorzystywane w naszej aplikacji pochodzą z "Hourly forecast by OpenWeatherMap!".
 
 ## Jak to wygląda? - wersja demo i grafiki aplikacji.
 
@@ -81,15 +81,12 @@ W celu uruchomienia serwera developerskiego wpisujemy polecenie: `npm run dev` i
 
 #### 2. `package.json` - plik zawierający wszystkie informacje o tworzonym przez nas projekcie.
 #### 3. `package-lock.json` - plik, w którym przechowywane są szczegółowe informacje o zainstalowanych przez nas modułach.
-#### 4. `webpack.config.js`  - plik zawierający konfigurację webpack'a.
-
-Webpack pozwola stworzyć wersję produkcyjną aplikacji.
+#### 4. `webpack.config.js`  - plik zawierający konfigurację webpack'a. Pozwola stworzyć wersję produkcyjną aplikacji.
   
 **Jak działa webpack?**
 
-Webpack zbiera wszystko co jest dodane do pliku `index.js` i robi z tego paczkę, którą będziemy mogli wrzucić na serwer jak będziemy chcieli nasz projekt udostępnić oline.
-Jeżeli dodajemy jakiś kod JS to nie ma potrzeby wrzucać go w index.html w tagach <script> bo webpack zrobi to za nas - na tym polega właśnie automatyzacja jaką nam oferuje. 
-Najważniejsze żeby nasz kod zaimportować w pliku `index.js`
+Webpack zbiera wszystko co jest dodane do pliku `index.js` i robi z tego paczkę, którą można wrzucić na serwer w celu udostępnienia projektu online.
+Dzięki niemu jeżeli dodajemy kod JS to nie ma potrzeby załączać go w index.html w tagach <script> bo webpack zrobi to za nas - na tym polega właśnie automatyzacja jaką nam oferuje. 
 
 #### 5. `README.md` -here we are! readme to dokument, który pozowli Ci poruszać sie po aplikacji.
 
