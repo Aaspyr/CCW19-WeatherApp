@@ -1,5 +1,5 @@
-# PADA? - simply weatherApp
-It's our weather aplication created for CodersCamp 2019!
+# PADA? - nasz pierwsza aplikacja pogodowa!
+Jako uczestnicy CodersCamp2019 stworzyliśmy swoją pierwszą aplikację pogodową
 
 ## Znajdź to czego szukasz:
 
@@ -7,6 +7,7 @@ It's our weather aplication created for CodersCamp 2019!
 2. [Jak to wygląda](#Jak-to-wygląda)
 3. [Użyte technologie](#Użyte-technologie)
 4. [Struktura plików aplikacji](#Struktura-plików-aplikacji)
+5. [Status aplikacji](#Status-aplikacji)
 
 ## Ogólne informacje.
 Pada? jest aplikacją pogodową, któa pozwala uzyskać informację na temat bieżących, a także przyszłych warunków pogodowych wybranej lokalizacji. Informacje wykorzystywane w naszej aplikacji pochodzą z "Hourly forecast by OpenWeatherMap!".
@@ -89,6 +90,9 @@ Jeżeli dodajemy jakiś kod JS to nie ma potrzeby wrzucać go w index.html w tag
 Najważniejsze żeby nasz kod zaimportować w pliku `index.js`
 
 #### 5. `README.md` -here we are! readme to dokument, który pozowli Ci poruszać sie po aplikacji.
+
+## Status aplikacji.
+Aplikacja została ukończona 08.09.2019r.  
 
 
 
