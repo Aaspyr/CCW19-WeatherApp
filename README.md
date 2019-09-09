@@ -14,18 +14,25 @@ Pada? jest aplikacją pogodową, któa pozwala uzyskać informację na temat bie
 ## Jak to wygląda? - wersja demo i grafiki aplikacji.
 Oto demo wersja naszej aplikacji : https://malgoskabou.github.io/CoolWeatherApp/
 
-Aplikacja jest intuicyjna i zawiera jeden główny ekran:
-![jj](./screens/main.png)
+Aplikacja jest intuicyjna i zawiera jeden główny ekran. Jeśli użytkownik poprzednio korzystał z aplikacji, po ponownym uruchomieniu będzie ona wyświetlała pogodę dla ostatniego zapisu. Jeśli użytkownik korzysta po raz pierwszy zostaną wyświetlone dane pogodowe dla dla miejsca, gdzie użytkownik zostanie zlokalizowany(gdy lokalizacja jest dostępna):
 
-Jeśli użytkownik poprzednio korzystał z aplikacji, po ponownym uruchomieniu będzie ona wyświetlała pogodę dla ostatniego zapisu. Jeśli użytkownik korzysta po raz pierwszy zostaną wyświetlone dane pogodowe dla dla miejsca, gdzie użytkownik zostanie zlokalizowany(gdy lokalizacja jest dostępna):
+![główny ekran aplikacji](./screens/main.png)
 
 Użytkownik uzyskuje szczegółowe informacje na temat pogody wybranego miasta w konkretnym dniu:
 
+![szczegółowa pogoda na dany dzień](./screens/details.png)
+
 A takaże ogólne informacje na temat pogody w najbliższych dniach:
+
+![szczegółowa pogoda na dany dzień](./screens/next.png)
 
 W każdej chwili istnieje możliwość zmiany lokalizacji, zarówno po wpisaniu konkretniej miejscowości(pomocą jest tu lista  podpowiedzi miejscowości w Polsce) jak i po geolokalizacji:
 
+![szczegółowa pogoda na dany dzień](./screens/find.png)
+
 Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach, jak np. błędnie wpisane miastobr czy ak zgody na lokalizację:
+
+![szczegółowa pogoda na dany dzień](./screens/error.png)
 
 ## Użyte technologie.
 - HTML, CSS,
@@ -67,6 +74,7 @@ Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach,
 #### 4. `webpack.config.js`  - plik zawierający konfigurację webpack'a.
 
 Webpack pozwola stworzyć wersję produkcyjną aplikacji.
+
 **JAK UŻYWAĆ**
 
 Należy przejść do głównego katalogu projektu i zainstalować wszystkie biblioteki za pomocą `npm install`.
