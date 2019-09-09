@@ -1,18 +1,21 @@
-# PADA? - nasz pierwsza aplikacja pogodowa!
-Jako uczestnicy CodersCamp2019 stworzyliśmy swoją pierwszą aplikację pogodową
+# PADA? - nasza pierwsza aplikacja pogodowa!
+Jako uczestnicy CodersCamp2019 stworzyliśmy swoją pierwszą aplikację pogodową. Sprawdź ją!
 
 ## Znajdź to czego szukasz:
 
 1. [Ogólne informacje](#Ogólne-informacje)
 2. [Jak to wygląda](#Jak-to-wygląda)
 3. [Użyte technologie](#Użyte-technologie)
-4. [Struktura plików aplikacji](#Struktura-plików-aplikacji)
-5. [Status aplikacji](#Status-aplikacji)
+4. [Uruchomienie](#Uruchomienie)
+5. [Struktura plików aplikacji](#Struktura-plików-aplikacji)
+6. [Status aplikacji](#Status-aplikacji)
 
 ## Ogólne informacje.
+
 Pada? jest aplikacją pogodową, któa pozwala uzyskać informację na temat bieżących, a także przyszłych warunków pogodowych wybranej lokalizacji. Informacje wykorzystywane w naszej aplikacji pochodzą z "Hourly forecast by OpenWeatherMap!".
 
 ## Jak to wygląda? - wersja demo i grafiki aplikacji.
+
 Oto demo wersja naszej aplikacji : https://malgoskabou.github.io/CoolWeatherApp/
 
 Aplikacja jest intuicyjna i zawiera jeden główny ekran. Jeśli użytkownik poprzednio korzystał z aplikacji, po ponownym uruchomieniu będzie ona wyświetlała pogodę dla ostatniego zapisu. Jeśli użytkownik korzysta po raz pierwszy zostaną wyświetlone dane pogodowe dla dla miejsca, gdzie użytkownik zostanie zlokalizowany(gdy lokalizacja jest dostępna):
@@ -35,17 +38,23 @@ Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach,
 
 ![źle wpisane miasto](./screens/error.png)
 
-## Użyte technologie.
+##  Użyte technologie
+
 - HTML, CSS,
 - JS,
 - Google Places API
 - Google Geolocation API
 
-## Struktura plików aplikacji.
+## Uruchomienie
+
+Należy przejść do głównego katalogu projektu i zainstalować wszystkie biblioteki za pomocą `npm install`.
+W celu uruchomienia serwera developerskiego wpisujemy polecenie: `npm run dev` i naciskamy enter. 
+
+## Struktura plików aplikacji
 
 #### 1. src - folder gromadzący treści splikacji
 
- - **icons** - tu znajdziesz wykorzystane w aplikacji ikonki
+ - **icons** - tu znajdziesz wykorzystane w aplikacji ikonki.
 
 - **js** - folder będący pudełkiem na wszystkie js'owe skrypty:
     - `currenDate.js` - plik z kodem pobierającym aktualną datę,
@@ -75,13 +84,6 @@ Aplikacja jest przyjazna użytkownikowi i informuje o ewentualnych przeszkodach,
 #### 4. `webpack.config.js`  - plik zawierający konfigurację webpack'a.
 
 Webpack pozwola stworzyć wersję produkcyjną aplikacji.
-
-**JAK UŻYWAĆ**
-
-Należy przejść do głównego katalogu projektu i zainstalować wszystkie biblioteki za pomocą `npm install`.
-Następni wpisujemy polecenie: `npm run build` i naciskamy enter żeby zbudować projekt.
-
-W celu uruchomienia serwera developerskiego wpisujemy polecenie: `npm run dev` i naciskamy enter. Dzięki temu możemy wprowadzać zmiany w kodzie a strona będzie automatycznie je pokazywać w przeglądarce po zapisaniu.
   
 **Jak działa webpack?**
 
@@ -91,7 +93,7 @@ Najważniejsze żeby nasz kod zaimportować w pliku `index.js`
 
 #### 5. `README.md` -here we are! readme to dokument, który pozowli Ci poruszać sie po aplikacji.
 
-## Status aplikacji.
+##  Status aplikacji.
 Aplikacja została ukończona 08.09.2019r.  
 
 
