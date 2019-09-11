@@ -24,7 +24,7 @@ function getLocation() {
 function showPosition(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
-  const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=307b855de38a960270e1caa9d305240a`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=307b855de38a960270e1caa9d305240a`;
   fetch(url)
     .then(response => response.json())
     .then(data => {
