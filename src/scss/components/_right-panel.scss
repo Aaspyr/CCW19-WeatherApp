@@ -30,6 +30,9 @@
             list-style-type: none;
             @include respons(tablet) {
                 flex-direction: row;
+                min-height: 25rem;
+            }
+            @include respons(phone) {
                 min-height: 21rem;
             }
 
