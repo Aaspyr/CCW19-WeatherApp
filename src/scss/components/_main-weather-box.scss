@@ -27,7 +27,7 @@
         left: 2rem;
         color: $color-white;
         text-decoration: none;
-        font-size: 3.5rem;
+        font-size: 2.5rem;
         display: none;
         @include respons(phone) {
             display: inline;
@@ -45,12 +45,16 @@
       height: 11rem;
       width: 11rem;
       @include respons(phone) {
-        height: 8rem;
-        width: 8rem;
-            }
+        height: 6rem;
+        width: 6rem;
+        right: -10%;
+      }
     }
     &--paragraph {
       font-size: 1.9rem;
+      @include respons(phone) {
+        font-size: 1.4rem;
+      }
     }
   }
 
@@ -75,6 +79,9 @@
       text-align: center;
       border-left: 1px solid $color-white-transparent;
       line-height: 3rem;
+      @include respons(phone) {
+        line-height: 2rem;
+      }
       &--bold {
         display: block;
         font-weight: 400;
