@@ -8,18 +8,25 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        use: [
+          {loader: "babel-loader"},
+          {
+            loader: 'string-replace-loader',
+            options: {
+              search: '..\/src\/icons',
+              replace: 'src/icons',
+              flags: 'g'
+            }
+          }
+      ]
       },
       {
         test: /\.html$/,
-        use: [
+        use: 
           {
             loader: "html-loader",
             options: { minimize: true }
           }
-        ]
       },
       {
         test: /\.css$/,
@@ -31,7 +38,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: "file-loader?name=[name].[ext]&outputPath=./images/"
+        use: "file-loader?name=[name].[ext]&outputPath=./src/icons/"
       }
     ]
   },
@@ -44,6 +51,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
-    })
+     })
   ]
 };
